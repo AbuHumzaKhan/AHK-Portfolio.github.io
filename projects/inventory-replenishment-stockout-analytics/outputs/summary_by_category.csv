@@ -1,0 +1,6 @@
+category,demand_units,fulfilled_units,lost_units,stockout_days,sku_warehouse_days,lost_revenue_inr,fill_rate_pct,stockout_day_rate_pct
+Electronics,35072,34641,431,38,2160,577350.07,98.77,1.76
+Home,29689,29241,448,39,1890,433773.40,98.49,2.06
+Office,22214,21878,336,49,1890,757234.18,98.49,2.59
+Personal Care,21611,21354,257,35,1890,412055.89,98.81,1.85
+Sports,29743,29107,636,52,1890,1080797.77,97.86,2.75
