@@ -1,0 +1,13 @@
+check_name,passed,details
+unique_product_keys,True,36 unique SKUs
+unique_warehouse_keys,True,3 unique warehouses
+expected_daily_grain,True,9720 rows vs expected 9720
+unique_daily_keys,True,0 duplicate keys
+no_negative_stock_or_units,True,All unit fields non-negative
+demand_balance,True,Demand = fulfilled + lost for every row
+stock_balance,True,Closing = opening - fulfilled; receipts are included in opening stock
+stockout_flag_consistency,True,Flag equals 1 when lost units > 0
+valid_product_foreign_keys,True,Every inventory SKU exists in products
+valid_warehouse_foreign_keys,True,Every inventory warehouse exists
+po_quantity_pack_multiple,True,All PO quantities are pack-size multiples
+fill_rate_in_range,True,Fill rate 98.48%
