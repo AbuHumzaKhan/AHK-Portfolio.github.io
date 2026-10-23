@@ -1,0 +1,6 @@
+date,sku,warehouse_id,opening_stock_units,receipts_units,demand_units,fulfilled_units,lost_units,closing_stock_units,stockout_flag,inventory_value_inr,inventory_position_units,reorder_point_units
+2026-07-03,SKU-001,WH-NORTH,109,0,15,15,0,94,0,137239.06,94,94
+2026-07-04,SKU-001,WH-NORTH,94,0,12,12,0,82,0,119719.18,322,94
+2026-07-05,SKU-001,WH-NORTH,82,0,15,15,0,67,0,97819.33,307,94
+2026-07-06,SKU-001,WH-NORTH,67,0,18,18,0,49,0,71539.51,289,94
+2026-07-07,SKU-001,WH-NORTH,49,0,10,10,0,39,0,56939.61,279,94
