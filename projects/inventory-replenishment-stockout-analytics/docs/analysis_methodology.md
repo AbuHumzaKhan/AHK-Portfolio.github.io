@@ -1,0 +1,5 @@
+# Analysis Methodology
+
+The pipeline simulates daily demand using a Poisson distribution, a SKU baseline, a warehouse demand multiplier, weekday variation, and a small within-month factor. Reorder points combine baseline demand × supplier lead time with an illustrative safety-stock buffer. When inventory position reaches the reorder point, the simulation creates one open PO per SKU/warehouse and rounds order quantity to a pack-size multiple. Receipt delays are synthetic (0–2 days). Demand beyond available stock is recorded as lost units, not backorders.
+
+The analysis compares unit fill rate, stockout-day rate, potential lost sales value, warehouse service levels, category risk, SKU-level unmet demand, and supplier on-time rate. The analysis is descriptive and scenario-based; it is not an optimizer or causal model.
