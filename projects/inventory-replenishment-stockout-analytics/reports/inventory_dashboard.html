@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Inventory Replenishment & Stockout Analytics</title>
+<style>
+:root{font-family:Arial,sans-serif;color:#172a43;background:#eef3f8}body{margin:0}header{background:#123354;color:#fff;padding:26px 5vw}header h1{margin:0 0 8px;font-size:clamp(24px,3vw,36px)}header p{margin:0;color:#d8e6f4}main{max-width:1250px;margin:0 auto;padding:24px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:14px}.card,section{background:#fff;border:1px solid #dce5ef;border-radius:12px;padding:18px;box-shadow:0 4px 14px #16324b0b;margin-bottom:18px}.label{font-size:13px;color:#5c6e81}.value{font-size:26px;font-weight:700;margin-top:8px;color:#153c65}.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px}img{width:100%;height:auto}table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:9px;border-bottom:1px solid #e0e7ef;text-align:left}th{background:#f4f7fb}.note{font-size:13px;color:#5c6e81;line-height:1.5}
+</style></head><body>
+<header><h1>Inventory Replenishment &amp; Stockout Analytics</h1><p>Synthetic 90-day scenario · 03 Jul 2026 – 30 Sep 2026 · Python, SQL, Excel</p></header>
+<main><div class="grid">
+<div class="card"><div class="label">Total demand</div><div class="value">138,329 units</div></div>
+<div class="card"><div class="label">Fulfilled</div><div class="value">136,221 units</div></div>
+<div class="card"><div class="label">Unmet demand</div><div class="value">2,108 units</div></div>
+<div class="card"><div class="label">Unit fill rate</div><div class="value">98.48%</div></div>
+<div class="card"><div class="label">Stockout-day rate</div><div class="value">2.19%</div></div>
+<div class="card"><div class="label">Potential lost sales value</div><div class="value">₹32.61 lakh</div></div>
+</div>
+<div class="cols"><section><h2>Stockout-day rate by category</h2><img src="stockout_rate_by_category.svg" alt="Stockout-day rate by category"></section><section><h2>Unit fill rate by warehouse</h2><img src="fill_rate_by_warehouse.svg" alt="Fill rate by warehouse"></section></div>
+<section><h2>What the scenario suggests</h2><ul><li>Sports has the highest simulated category stockout-day rate: 2.75%.</li><li>North Hub has the lowest fill rate: 97.61%, with 1,205 unmet units.</li><li>SKU-033 (Skipping Rope) has the highest unmet volume: 220 units.</li><li>747 simulated purchase orders were created; 687 were received in the observation window. The on-time rate among received POs is 62.30%.</li></ul></section>
+<section><h2>Priority SKU review</h2><table><thead><tr><th>SKU</th><th>Product</th><th>Category</th><th>Lost units</th><th>Fill rate</th><th>Potential lost sales value</th></tr></thead><tbody>
+<tr><td>SKU-033</td><td>Skipping Rope</td><td>Sports</td><td>220</td><td>96.58%</td><td>₹275,387</td></tr>
+<tr><td>SKU-009</td><td>Storage Box</td><td>Home</td><td>173</td><td>97.36%</td><td>₹109,559</td></tr>
+<tr><td>SKU-034</td><td>Gym Towel</td><td>Sports</td><td>123</td><td>97.29%</td><td>₹207,709</td></tr>
+<tr><td>SKU-035</td><td>Fitness Gloves</td><td>Sports</td><td>104</td><td>98.21%</td><td>₹245,093</td></tr>
+<tr><td>SKU-006</td><td>HDMI Adapter</td><td>Electronics</td><td>102</td><td>98.15%</td><td>₹167,734</td></tr>
+</tbody></table></section>
+<p class="note">Synthetic data only. Potential lost sales value is unmet units × synthetic list price; it is not realized revenue or a forecast. The 20% annual carrying-cost rate and replenishment rules are illustrative. No native Power BI PBIX is included; this is a static HTML report with SVG charts.</p>
+</main></body></html>
