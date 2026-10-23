@@ -805,9 +805,11 @@
             
             // Simple validation
             if (name && email && message) {
-                // Here you would typically send the form data to a server
-                showToast('Thank you for your message! I will get back to you soon.');
-                contactForm.reset();
+                // This static site has no message backend. Open the visitor's email client instead.
+                const subject = encodeURIComponent(`Portfolio contact from ${name}`);
+                const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+                showToast('Opening your email app to send this message.');
+                window.location.href = `mailto:abuhumzakhan87@gmail.com?subject=${subject}&body=${body}`;
             } else {
                 showToast('Please fill in all fields.');
             }
