@@ -1,0 +1,22 @@
+{
+  "period_start": "2026-07-03",
+  "period_end": "2026-09-30",
+  "sku_count": 36,
+  "warehouse_count": 3,
+  "sku_warehouse_days": 9720,
+  "total_demand_units": 138329,
+  "fulfilled_units": 136221,
+  "lost_units": 2108,
+  "fill_rate_pct": 98.48,
+  "stockout_days": 213,
+  "stockout_day_rate_pct": 2.19,
+  "ending_inventory_units": 11697,
+  "ending_inventory_value_inr": 13488172.55,
+  "potential_lost_revenue_inr": 3261211.31,
+  "purchase_orders": 747,
+  "received_purchase_orders": 687,
+  "open_purchase_orders_at_period_end": 60,
+  "supplier_on_time_rate_pct": 62.3,
+  "estimated_carrying_cost_inr": 655607.44,
+  "annual_carrying_cost_rate_assumption_pct": 20.0
+}
