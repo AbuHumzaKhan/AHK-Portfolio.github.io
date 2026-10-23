@@ -1,0 +1,6 @@
+sku,product_name,category,demand_units,fulfilled_units,lost_units,fill_rate_pct,stockout_day_rate_pct,potential_lost_revenue_inr
+SKU-033,Skipping Rope,Sports,6430,6210,220,96.58,4.81,275387.20
+SKU-009,Storage Box,Home,6556,6383,173,97.36,2.96,109559.17
+SKU-034,Gym Towel,Sports,4538,4415,123,97.29,3.33,207708.87
+SKU-035,Fitness Gloves,Sports,5809,5705,104,98.21,2.96,245092.64
+SKU-006,HDMI Adapter,Electronics,5520,5418,102,98.15,1.85,167733.90
