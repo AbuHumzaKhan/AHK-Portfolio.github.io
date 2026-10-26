@@ -61,4 +61,13 @@ class ProjectTests(unittest.TestCase):
         self.assertTrue((ROOT/'reports'/'dashboard.html').exists())
         self.assertTrue((ROOT/'excel'/'Marketing_Campaign_Performance_Analysis.xlsx').exists())
         self.assertTrue((ROOT/'reports'/'dashboard_preview.svg').exists())
+    def test_required_fields_populated(self):
+        for row in self.daily:
+            for key in ['date','campaign_id','channel','objective','audience_segment']:
+                self.assertTrue(row[key].strip(), key)
+    def test_metric_spend_and_revenue_match_source(self):
+        m=self.metrics['overall']
+        self.assertAlmostEqual(m['spend_usd'],sum(float(r['spend_usd']) for r in self.daily),places=2)
+        self.assertAlmostEqual(m['revenue_usd'],sum(float(r['revenue_usd']) for r in self.daily),places=2)
+
 if __name__=='__main__': unittest.main(verbosity=2)
