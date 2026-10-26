@@ -1,0 +1,12 @@
+check,passed
+accounts_pk_unique,True
+invoice_pk_unique,True
+usage_composite_key_unique,True
+tickets_pk_unique,True
+invoice_fk_coverage,True
+usage_fk_coverage,True
+ticket_fk_coverage,True
+nonnegative_financials,True
+nonnegative_usage,True
+resolved_hours_consistency,True
+sqlite_foreign_keys,True
