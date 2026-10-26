@@ -46,7 +46,7 @@ def generate(out_dir:Path=ROOT/"data",seed:int=SEED):
         priority=rng.choices(["low","medium","high"],weights=[.35,.46,.19])[0]
         status=rng.choices(["resolved","open","in_progress"],weights=[.74,.16,.10])[0]
         hours=round(rng.lognormvariate(2.1 if priority=="low" else (1.8 if priority=="medium" else 1.4),.55),2) if status=="resolved" else None
-        resolved=(created+timedelta(days=max(0,int((hours or 0)//24))).isoformat()) if False else (created+timedelta(days=max(0,int((hours or 0)//24)))).isoformat() if status=="resolved" else None
+        resolved=(created+timedelta(days=max(0,int((hours or 0)//24)))).isoformat() if status=="resolved" else None
         tickets.append({"ticket_id":f"T{i:04d}","account_id":a["account_id"],"created_date":created.isoformat(),"resolved_date":resolved,
           "priority":priority,"status":status,"category":rng.choice(categories),"resolution_hours":hours})
     frames={"accounts":pd.DataFrame(accounts),"invoices":pd.DataFrame(invoices),"usage_daily":pd.DataFrame(usage),"support_tickets":pd.DataFrame(tickets)}
