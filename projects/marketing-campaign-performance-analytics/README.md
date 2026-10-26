@@ -28,6 +28,9 @@ The highest modeled channel ROAS is Email at 17.26x. Lifecycle Email also has th
 
 ## Included assets
 
+The public showcase commits source, documentation, and report previews. The generated CSVs, SQLite database, SQL seed file, and Excel workbook are not committed as individual files in this showcase; run the generator to recreate the data artifacts. The complete project ZIP supplied with this delivery contains the full datasets, database, workbook, and interactive dashboard.
+
+
 - Python generator and KPI analysis script.
 - SQLite schema, reproducible seed-data generator, business queries, and SQL QA checks.
 - Excel workbook in the downloadable bundle, with formulas, campaign/channel summaries, filters, and charts.
