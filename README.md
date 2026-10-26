@@ -84,3 +84,8 @@ Abu Humza Khan
 - [Project 05 — AI Product Analysis](projects/ai-product-analysis/README.md): synthetic AI interaction telemetry, output outcomes, regeneration, cost per successful output, SQL, and Power BI M/DAX assets.
 
 These folders are portfolio showcases. Full local build bundles include generated CSVs, SQLite databases, tests, and Project 04's Excel workbook. Project 05 does not include a native PBIX file. No hosted API or Power BI Service deployment is claimed.
+
+
+## New analytics project showcase — 26 October 2026
+
+- [Marketing Campaign Performance & Budget Efficiency Analytics](projects/marketing-campaign-performance-analytics/README.md): synthetic 12-week campaign scenario built with Python, SQL/SQLite, Excel, Power BI assets, and HTML reporting. Includes KPI scorecards, SQL schema/queries/QA, reproducible generator, validation tests, and explicit limitations. Native .pbix and hosted deployment are not claimed.
