@@ -1,0 +1,7 @@
+{
+  "scenario":{"seed":20261026,"start_date":"2026-07-06","end_date":"2026-09-27","daily_rows":672,"campaigns":8,"channels":6,"synthetic":true},
+  "overall":{"rows":672,"impressions":14425535,"clicks":339089,"spend_usd":250684.98,"conversions":17298,"revenue_usd":1451894.37,"budget_usd":299040.0,"ctr":0.02350616458938958,"cpc":0.7392896260273851,"conversion_rate":0.05101315583814279,"cpa":14.492136663198059,"roas":5.791708661603899,"budget_utilization":0.8382991573033708},
+  "top_channel_by_roas":{"channel":"Email","roas":17.261,"spend_usd":13574.74,"revenue_usd":234313.39},
+  "lowest_cpa_campaign":{"campaign":"Lifecycle Email","channel":"Email","cpa_usd":4.0,"conversions":3394},
+  "highest_spend_campaign":{"campaign":"Generic Search","spend_usd":90434.04}
+}
