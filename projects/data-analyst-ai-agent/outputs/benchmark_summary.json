@@ -1,0 +1,11 @@
+{
+  "benchmark_questions": 24,
+  "before_context_correct": 8,
+  "before_context_accuracy_pct": 33.33,
+  "after_context_correct": 24,
+  "after_context_accuracy_pct": 100,
+  "accuracy_lift_percentage_points": 66.67,
+  "unanswered_before": 16,
+  "unanswered_after": 0,
+  "evaluation_note": "Deterministic intent-router/context ablation; not an LLM evaluation. Exact formatted answers are compared against known SQL-template outputs."
+}
