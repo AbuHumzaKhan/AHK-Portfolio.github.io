@@ -13,7 +13,9 @@
 | audience_segment | text | Synthetic audience grouping. |
 | daily_budget_usd | decimal | Illustrative planned daily budget. |
 
-## campaign_daily_performance table / campaign_daily_performance.csv
+## campaign_daily_performance.csv export and normalized SQL fact table
+
+The CSV is denormalized for Excel and Power BI and includes campaign labels plus daily_budget_usd. The SQLite fact table stores date, campaign_id, impressions, clicks, spend_usd, conversions, and revenue_usd; campaign labels and planned daily budget live in the campaigns dimension.
 
 | Field | Type | Definition |
 |---|---|---|
