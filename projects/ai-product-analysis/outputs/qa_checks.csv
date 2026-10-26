@@ -1,0 +1,12 @@
+check,passed,detail
+request_primary_key_unique,True,3000 unique / 3000 rows
+event_primary_key_unique,True,9123 unique / 9123 rows
+event_foreign_keys_valid,True,Every event references a request
+outcome_counts_reconcile,True,"Outcome total=3000; requests=3000"
+success_flag_matches_outcome,True,"Accepted/edited are successful; rejected/failed are not"
+token_total_reconciles,True,"Total tokens = input + output"
+nonnegative_cost_and_latency,True,"Costs and latency are non-negative"
+request_event_cost_reconciles,True,"request=22.89877490; event=22.89877490"
+regeneration_events_reconcile,True,"2202 regenerations match event log"
+sqlite_request_count_reconciles,True,"SQL requests=3000; CSV requests=3000"
+sqlite_event_count_reconciles,True,"SQL events=9123; CSV events=9123"
