@@ -33,7 +33,16 @@ SELECT strftime('%Y-%W',date) AS year_week, ROUND(SUM(spend_usd),2) spend_usd,
        ROUND(1.0*SUM(revenue_usd)/NULLIF(SUM(spend_usd),0),2) roas
 FROM campaign_daily_performance GROUP BY year_week ORDER BY year_week;
 
--- 5. High-spend campaigns below portfolio ROAS (diagnostic only)
+-- 5. Budget pacing by campaign; planned budget is daily budget multiplied by observed campaign-days.
+SELECT c.campaign_id, c.campaign_name, c.channel,
+       ROUND(SUM(d.spend_usd),2) AS actual_spend_usd,
+       ROUND(c.daily_budget_usd * COUNT(*),2) AS planned_budget_usd,
+       ROUND(1.0*SUM(d.spend_usd)/NULLIF(c.daily_budget_usd*COUNT(*),0),4) AS budget_utilization
+FROM campaign_daily_performance d JOIN campaigns c USING(campaign_id)
+GROUP BY c.campaign_id,c.campaign_name,c.channel,c.daily_budget_usd
+ORDER BY budget_utilization DESC;
+
+-- 6. High-spend campaigns below portfolio ROAS (diagnostic only)
 WITH total AS (SELECT 1.0*SUM(revenue_usd)/NULLIF(SUM(spend_usd),0) portfolio_roas FROM campaign_daily_performance),
 by_campaign AS (
   SELECT c.campaign_name,c.channel,SUM(d.spend_usd) spend_usd,
