@@ -1,0 +1,122 @@
+[
+  {
+    "id": "Q01",
+    "question": "How many active accounts?",
+    "intent": "active_accounts"
+  },
+  {
+    "id": "Q02",
+    "question": "What is MRR?",
+    "intent": "mrr"
+  },
+  {
+    "id": "Q03",
+    "question": "What is billed revenue?",
+    "intent": "billed_revenue"
+  },
+  {
+    "id": "Q04",
+    "question": "How much cash collected is recorded in paid invoices?",
+    "intent": "paid_revenue"
+  },
+  {
+    "id": "Q05",
+    "question": "What is the past-due accounts receivable exposure?",
+    "intent": "overdue_balance"
+  },
+  {
+    "id": "Q06",
+    "question": "How many churned accounts?",
+    "intent": "churned_accounts"
+  },
+  {
+    "id": "Q07",
+    "question": "What is the typical monthly contract value among live accounts?",
+    "intent": "avg_mrr_active"
+  },
+  {
+    "id": "Q08",
+    "question": "Which subscription tier contributes the most run-rate?",
+    "intent": "mrr_by_plan"
+  },
+  {
+    "id": "Q09",
+    "question": "Which territory has the largest live customer base?",
+    "intent": "active_by_region"
+  },
+  {
+    "id": "Q10",
+    "question": "How many unresolved tickets?",
+    "intent": "unresolved_tickets"
+  },
+  {
+    "id": "Q11",
+    "question": "What fraction of cases remain in the queue?",
+    "intent": "unresolved_ticket_rate"
+  },
+  {
+    "id": "Q12",
+    "question": "What is the median time to close a support case?",
+    "intent": "median_resolution_hours"
+  },
+  {
+    "id": "Q13",
+    "question": "How many active accounts generated product activity in the last full month?",
+    "intent": "active_usage_accounts_sep"
+  },
+  {
+    "id": "Q14",
+    "question": "What was platform API volume in September?",
+    "intent": "api_calls_sep"
+  },
+  {
+    "id": "Q15",
+    "question": "Which customer cohort generated the most billings?",
+    "intent": "billed_by_segment"
+  },
+  {
+    "id": "Q16",
+    "question": "How many invoices are late?",
+    "intent": "overdue_invoice_count"
+  },
+  {
+    "id": "Q17",
+    "question": "How long do urgent tickets take to resolve on average?",
+    "intent": "avg_high_priority_resolution"
+  },
+  {
+    "id": "Q18",
+    "question": "What amount was written off as void?",
+    "intent": "void_invoice_amount"
+  },
+  {
+    "id": "Q19",
+    "question": "How many trial accounts?",
+    "intent": "trial_accounts"
+  },
+  {
+    "id": "Q20",
+    "question": "What proportion of all organizations have churned?",
+    "intent": "churn_rate"
+  },
+  {
+    "id": "Q21",
+    "question": "What is collection efficiency on valid invoices?",
+    "intent": "collection_rate"
+  },
+  {
+    "id": "Q22",
+    "question": "Which customer cohort creates the most support demand?",
+    "intent": "tickets_by_segment"
+  },
+  {
+    "id": "Q23",
+    "question": "How many distinct customers contacted support during September?",
+    "intent": "sep_ticket_accounts"
+  },
+  {
+    "id": "Q24",
+    "question": "How many paid seats are provisioned across live customers?",
+    "intent": "active_seats"
+  }
+]
