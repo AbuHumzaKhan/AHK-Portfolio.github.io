@@ -1,0 +1,21 @@
+{
+  "project": "Context-Aware Data Analyst Agent",
+  "as_of_date": "2026-10-01",
+  "data_provenance": "Deterministic synthetic data, seed 20261026; no real customer data.",
+  "business_rules": [
+    "Active accounts have account_status='active'; trials are excluded.",
+    "MRR is the sum of monthly_contract_value_inr for active accounts.",
+    "Billed revenue includes paid and open invoices and excludes void invoices.",
+    "Cash collected is paid_amount_inr on paid invoices only.",
+    "Overdue receivables are open invoices due before 2026-10-01.",
+    "Unresolved support tickets have status open or in_progress.",
+    "All INR amounts are illustrative synthetic scenario values."
+  ],
+  "example_synonyms": {
+    "mrr": ["monthly recurring revenue", "subscription run-rate per month"],
+    "overdue_balance": ["past-due accounts receivable", "past-due AR exposure"],
+    "paid_revenue": ["cash collected", "money actually came in"],
+    "unresolved_tickets": ["service cases awaiting action", "cases in the queue"],
+    "collection_rate": ["collection efficiency on valid invoices"]
+  }
+}
