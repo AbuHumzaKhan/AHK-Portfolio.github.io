@@ -1,6 +1,6 @@
 // Create a text parameter named ProjectRoot pointing to the project's data folder.
 let
-    Source = Csv.Document(File.Contents(ProjectRoot & "\\campaign_daily_performance.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+    Source = Csv.Document(File.Contents(ProjectRoot & "\campaign_daily_performance.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
     PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
     ChangedTypes = Table.TransformColumnTypes(PromotedHeaders, {
         {"date", type date}, {"campaign_id", type text}, {"campaign_name", type text},
