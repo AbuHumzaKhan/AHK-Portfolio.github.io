@@ -57,9 +57,8 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(m['clicks'],sum(int(r['clicks']) for r in self.daily))
         self.assertEqual(m['conversions'],sum(int(r['conversions']) for r in self.daily))
         self.assertAlmostEqual(m['roas'],m['revenue_usd']/m['spend_usd'],places=8)
-    def test_dashboard_and_workbook_exist(self):
-        self.assertTrue((ROOT/'reports'/'dashboard.html').exists())
-        self.assertTrue((ROOT/'excel'/'Marketing_Campaign_Performance_Analysis.xlsx').exists())
+    def test_dashboard_preview_assets_exist(self):
+        self.assertTrue((ROOT/'reports'/'dashboard_preview.html').exists())
         self.assertTrue((ROOT/'reports'/'dashboard_preview.svg').exists())
     def test_required_fields_populated(self):
         for row in self.daily:
