@@ -48,7 +48,7 @@ class ProjectTests(unittest.TestCase):
         sql=(ROOT/'sql'/'business_queries.sql').read_text(encoding='utf-8')
         sql='\n'.join(line for line in sql.splitlines() if not line.strip().startswith('--'))
         statements=[s.strip() for s in sql.split(';') if s.strip()]
-        self.assertEqual(len(statements),5)
+        self.assertEqual(len(statements),6)
         for statement in statements: self.db.execute(statement).fetchall()
     def test_metrics_match_source(self):
         m=self.metrics['overall']
