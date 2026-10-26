@@ -1,21 +1,275 @@
 {
   "project": "Context-Aware Data Analyst Agent",
   "as_of_date": "2026-10-01",
-  "data_provenance": "Deterministic synthetic data, seed 20261026; no real customer data.",
+  "data_provenance": "Deterministic synthetic data generated with seed 20261026; no real customer records.",
+  "tables": {
+    "accounts": "One row per fictional customer organization. Status is active, trial, or churned.",
+    "invoices": "One account-month invoice from April to September 2026. Status is paid, open, or void.",
+    "usage_daily": "One row per account per day from 2026-07-01 through 2026-09-30.",
+    "support_tickets": "One row per synthetic support case. Open and in_progress are unresolved."
+  },
   "business_rules": [
-    "Active accounts have account_status='active'; trials are excluded.",
-    "MRR is the sum of monthly_contract_value_inr for active accounts.",
+    "Active accounts means account_status='active'; trials are excluded.",
+    "MRR is the sum of monthly_contract_value_inr for active accounts, not invoice revenue or cash.",
     "Billed revenue includes paid and open invoices and excludes void invoices.",
-    "Cash collected is paid_amount_inr on paid invoices only.",
+    "Cash collected is paid_amount_inr for paid invoices only.",
     "Overdue receivables are open invoices due before 2026-10-01.",
-    "Unresolved support tickets have status open or in_progress.",
-    "All INR amounts are illustrative synthetic scenario values."
+    "Churn rate is churned accounts divided by all accounts.",
+    "Collection rate is paid cash divided by the face value of paid plus open invoices.",
+    "Unresolved tickets have status open or in_progress.",
+    "All INR amounts are illustrative synthetic values."
   ],
-  "example_synonyms": {
-    "mrr": ["monthly recurring revenue", "subscription run-rate per month"],
-    "overdue_balance": ["past-due accounts receivable", "past-due AR exposure"],
-    "paid_revenue": ["cash collected", "money actually came in"],
-    "unresolved_tickets": ["service cases awaiting action", "cases in the queue"],
-    "collection_rate": ["collection efficiency on valid invoices"]
+  "intents": {
+    "active_accounts": {
+      "baseline_aliases": [
+        "active accounts"
+      ],
+      "aliases": [
+        "active accounts",
+        "paying customer organizations",
+        "live customer base",
+        "live accounts",
+        "customer organizations currently active"
+      ]
+    },
+    "mrr": {
+      "baseline_aliases": [
+        "mrr"
+      ],
+      "aliases": [
+        "mrr",
+        "monthly recurring revenue",
+        "subscription run-rate per month",
+        "monthly subscription run rate"
+      ]
+    },
+    "billed_revenue": {
+      "baseline_aliases": [
+        "billed revenue"
+      ],
+      "aliases": [
+        "billed revenue",
+        "gross billings net of voided",
+        "net of voided documents",
+        "valid invoice billings"
+      ]
+    },
+    "paid_revenue": {
+      "baseline_aliases": [
+        "paid invoices"
+      ],
+      "aliases": [
+        "paid invoices",
+        "cash collected",
+        "money actually came in",
+        "cash received from customers"
+      ]
+    },
+    "overdue_balance": {
+      "baseline_aliases": [
+        "overdue receivables"
+      ],
+      "aliases": [
+        "overdue receivables",
+        "past-due accounts receivable",
+        "past-due ar exposure",
+        "late receivable balance"
+      ]
+    },
+    "churned_accounts": {
+      "baseline_aliases": [
+        "churned accounts"
+      ],
+      "aliases": [
+        "churned accounts",
+        "accounts have left the service",
+        "lost customer organizations",
+        "customers who left"
+      ]
+    },
+    "avg_mrr_active": {
+      "baseline_aliases": [
+        "average monthly contract value"
+      ],
+      "aliases": [
+        "average monthly contract value",
+        "typical monthly contract value among live accounts",
+        "average mrr per active account"
+      ]
+    },
+    "mrr_by_plan": {
+      "baseline_aliases": [
+        "mrr by plan"
+      ],
+      "aliases": [
+        "mrr by plan",
+        "subscription tier contributes the most run-rate",
+        "run-rate by subscription tier"
+      ]
+    },
+    "active_by_region": {
+      "baseline_aliases": [
+        "active accounts by region"
+      ],
+      "aliases": [
+        "active accounts by region",
+        "territory has the largest live customer base",
+        "regional active customer count"
+      ]
+    },
+    "unresolved_tickets": {
+      "baseline_aliases": [
+        "unresolved tickets"
+      ],
+      "aliases": [
+        "unresolved tickets",
+        "service cases awaiting action",
+        "cases still open",
+        "tickets in the queue"
+      ]
+    },
+    "unresolved_ticket_rate": {
+      "baseline_aliases": [
+        "unresolved ticket rate"
+      ],
+      "aliases": [
+        "unresolved ticket rate",
+        "fraction of cases remain in the queue",
+        "share of support cases unresolved"
+      ]
+    },
+    "median_resolution_hours": {
+      "baseline_aliases": [
+        "median resolution time"
+      ],
+      "aliases": [
+        "median resolution time",
+        "median time to close a support case",
+        "median ticket close time"
+      ]
+    },
+    "active_usage_accounts_sep": {
+      "baseline_aliases": [
+        "active accounts used product"
+      ],
+      "aliases": [
+        "active accounts used product",
+        "active accounts generated product activity in the last full month",
+        "september product activity accounts"
+      ]
+    },
+    "api_calls_sep": {
+      "baseline_aliases": [
+        "api usage"
+      ],
+      "aliases": [
+        "api usage",
+        "platform api volume in september",
+        "september api calls",
+        "september api volume"
+      ]
+    },
+    "billed_by_segment": {
+      "baseline_aliases": [
+        "billed by segment"
+      ],
+      "aliases": [
+        "billed by segment",
+        "customer cohort generated the most billings",
+        "billings by customer segment"
+      ]
+    },
+    "overdue_invoice_count": {
+      "baseline_aliases": [
+        "overdue invoice count"
+      ],
+      "aliases": [
+        "overdue invoice count",
+        "how many invoices are late",
+        "count of past-due invoices"
+      ]
+    },
+    "avg_high_priority_resolution": {
+      "baseline_aliases": [
+        "high priority resolution"
+      ],
+      "aliases": [
+        "high priority resolution",
+        "urgent tickets take to resolve on average",
+        "average close time for urgent cases"
+      ]
+    },
+    "void_invoice_amount": {
+      "baseline_aliases": [
+        "voided invoice amount"
+      ],
+      "aliases": [
+        "voided invoice amount",
+        "amount written off as void",
+        "written off as void",
+        "value of void invoices"
+      ]
+    },
+    "trial_accounts": {
+      "baseline_aliases": [
+        "trial accounts"
+      ],
+      "aliases": [
+        "trial accounts",
+        "prospects are still in trial",
+        "accounts in trial status"
+      ]
+    },
+    "churn_rate": {
+      "baseline_aliases": [
+        "churn rate"
+      ],
+      "aliases": [
+        "churn rate",
+        "proportion of all organizations have churned",
+        "share of customers lost"
+      ]
+    },
+    "collection_rate": {
+      "baseline_aliases": [
+        "collection rate"
+      ],
+      "aliases": [
+        "collection rate",
+        "collection efficiency on valid invoices",
+        "cash collection percentage"
+      ]
+    },
+    "tickets_by_segment": {
+      "baseline_aliases": [
+        "tickets by segment"
+      ],
+      "aliases": [
+        "tickets by segment",
+        "customer cohort creates the most support demand",
+        "support demand by segment"
+      ]
+    },
+    "sep_ticket_accounts": {
+      "baseline_aliases": [
+        "accounts raised ticket"
+      ],
+      "aliases": [
+        "accounts raised ticket",
+        "distinct customers contacted support during september",
+        "unique accounts opening september tickets"
+      ]
+    },
+    "active_seats": {
+      "baseline_aliases": [
+        "active seats"
+      ],
+      "aliases": [
+        "active seats",
+        "paid seats provisioned across live customers",
+        "paid seats are provisioned across live customers",
+        "seats across active customers"
+      ]
+    }
   }
 }
