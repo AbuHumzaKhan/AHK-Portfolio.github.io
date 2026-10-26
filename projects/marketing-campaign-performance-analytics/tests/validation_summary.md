@@ -8,7 +8,7 @@
 - Constraints: clicks never exceed impressions; numeric metrics are non-negative.
 - Database: SQLite integrity and foreign-key checks passed.
 - Reconciliation: CSV totals match SQLite and metrics_summary.json.
-- SQL: all QA checks returned zero failures; all five business queries executed successfully.
+- SQL: all QA checks returned zero failures; all six business queries executed successfully.
 - Excel: formulas, four worksheets, and three charts were inspected structurally; Excel recalculation should be confirmed on open.
 - Dashboard: HTML and SVG assets verified locally.
 
