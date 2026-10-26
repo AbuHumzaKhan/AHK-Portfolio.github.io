@@ -76,3 +76,11 @@ Abu Humza Khan
  | GitHub | https://github.com/AbuHumzaKhan
  | Kaggle | https://www.kaggle.com/abuhumzakhan
  Personal Portfolio | https://abuhumzakhan.github.io/AHK-Portfolio.github.io/
+
+
+## New analytics project showcases — 26 October 2026
+
+- [Project 04 — Data Analyst AI Agent](projects/data-analyst-ai-agent/README.md): context-aware business question answering, 24-question before/after context benchmark, synthetic SaaS data, SQL rules, and dashboard.
+- [Project 05 — AI Product Analysis](projects/ai-product-analysis/README.md): synthetic AI interaction telemetry, output outcomes, regeneration, cost per successful output, SQL, and Power BI M/DAX assets.
+
+These folders are portfolio showcases. Full local build bundles include generated CSVs, SQLite databases, tests, and Project 04's Excel workbook. Project 05 does not include a native PBIX file. No hosted API or Power BI Service deployment is claimed.
