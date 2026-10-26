@@ -1,0 +1,2 @@
+# Generator, analysis pipeline, and automated tests use Python's standard library only.
+# openpyxl was used during workbook assembly; it is not required to use the workbook.
