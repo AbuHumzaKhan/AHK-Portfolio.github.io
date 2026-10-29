@@ -62,9 +62,12 @@ The pipeline generates **7,200 synthetic appointment records** across six synthe
 - `src/run_pipeline.py` — one-command build.
 - `sql/schema.sql`, `sql/seed_data.sql`, `sql/business_queries.sql`, `sql/qa_checks.sql`.
 - `excel/Appointment_Access_NoShow_Analysis.xlsx` — formula-driven KPI workbook and charts (included in downloadable bundle; binary workbook not stored in this showcase).
-- [`reports/dashboard_showcase.html`](reports/dashboard_showcase.html) — static dashboard preview for portfolio visitors.\n- `reports/dashboard.html` — full interactive report generated locally from `reports/dashboard_template.html` and summary data; the generated version is included in the downloadable bundle.
+- [`reports/dashboard_showcase.html`](reports/dashboard_showcase.html) — static dashboard preview for portfolio visitors.
+- `reports/dashboard.html` — full interactive report generated locally from `reports/dashboard_template.html` and summary data; the generated version is included in the downloadable bundle.
 - `outputs/INITIAL_FINDINGS.md`, `outputs/metrics_summary.json`, `outputs/qa_checks.csv`.
-- `docs/data_dictionary.md`, `docs/deployment_guide.md`, `CHANGELOG.md`, `BUILD_AUDIT.md`, `tests/test_pipeline.py`.\n\nThe public showcase includes a small SQL seed example. Running the pipeline regenerates the 120-row SQL sample, complete 7,200-row CSV, SQLite database, Excel workbook, full interactive dashboard, charts, and QA artefacts. The generated CSV, database, workbook, and full interactive dashboard are in the downloadable package rather than individually committed here.
+- `docs/data_dictionary.md`, `docs/deployment_guide.md`, `CHANGELOG.md`, `BUILD_AUDIT.md`, `tests/test_pipeline.py`.
+
+The public showcase includes a 10-row SQL seed example. Running the pipeline regenerates the 120-row SQL sample, complete 7,200-row CSV, SQLite database, Excel workbook, full interactive dashboard, charts, and QA artefacts. The generated CSV, database, workbook, and full interactive dashboard are in the downloadable package rather than individually committed here.
 
 ## Run locally
 
