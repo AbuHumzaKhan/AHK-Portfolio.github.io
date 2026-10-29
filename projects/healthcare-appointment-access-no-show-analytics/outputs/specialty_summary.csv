@@ -1,0 +1,9 @@
+specialty,appointments,attended,no_shows,cancelled,rescheduled,avg_lead_days,avg_wait_min,no_show_rate_pct,attendance_rate_pct
+Cardiology,912,712,101,64,35,11.13,26.28,12.42,87.58
+Dermatology,764,592,80,57,35,11.36,23.58,11.9,88.1
+ENT,628,465,60,65,38,11.2,25.52,11.43,88.57
+General Practice,1831,1441,160,136,94,10.78,24.94,9.99,90.01
+Ophthalmology,578,449,47,58,24,11.11,25.36,9.48,90.52
+Orthopedics,940,732,101,73,34,10.77,26.2,12.12,87.88
+Pediatrics,862,682,77,59,44,10.97,24.72,10.14,89.86
+Physiotherapy,685,527,70,57,31,11.07,25.69,11.73,88.27
