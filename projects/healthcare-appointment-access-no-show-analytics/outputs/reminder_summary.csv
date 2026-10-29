@@ -1,0 +1,3 @@
+reminder_sent,appointments,attended,no_shows,cancelled,rescheduled,avg_lead_days,avg_wait_min,no_show_rate_pct,attendance_rate_pct
+No,1291,961,168,107,55,9.96,25.24,14.88,85.12
+Yes,5909,4639,528,462,280,11.23,25.26,10.22,89.78
