@@ -1,0 +1,7 @@
+clinic_name,appointments,attended,no_shows,cancelled,rescheduled,avg_lead_days,avg_wait_min,no_show_rate_pct,attendance_rate_pct
+Central Family Clinic,1405,1078,144,124,59,11.15,25.11,11.78,88.22
+Eastgate Clinic,1115,887,90,90,48,10.82,25.41,9.21,90.79
+Lakeside Specialty Centre,1070,811,107,93,59,11.07,26.66,11.66,88.34
+Northside Medical Centre,1336,1025,148,98,65,10.81,27.68,12.62,87.38
+Riverside Outpatient,1157,918,96,85,58,11.18,22.69,9.47,90.53
+West End Health Hub,1117,881,111,79,46,10.97,23.85,11.19,88.81
