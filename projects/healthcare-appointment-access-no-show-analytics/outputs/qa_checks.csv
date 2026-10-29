@@ -1,0 +1,11 @@
+check,observed,expected,passed
+row count matches CSV,7200,7200,True
+unique appointment IDs,7200,7200,True
+no negative lead days,0,0,True
+booking date not after appointment,0,0,True
+attended rows have wait times,0,0,True
+non-attended rows have null wait,0,0,True
+foreign-key violations,0,0,True
+valid status domain,0,0,True
+valid reminder domain,0,0,True
+records reconcile to status totals,0,0,True
