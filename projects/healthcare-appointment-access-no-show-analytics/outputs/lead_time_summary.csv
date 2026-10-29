@@ -1,0 +1,6 @@
+lead_time_band,appointments,attended,no_shows,cancelled,rescheduled,avg_lead_days,avg_wait_min,no_show_rate_pct,attendance_rate_pct
+0-1 days,234,186,15,20,13,0.9,24.49,7.46,92.54
+2-7 days,2591,2061,199,200,131,4.63,25.3,8.81,91.19
+8-14 days,2489,1947,245,196,101,10.65,25.02,11.18,88.82
+15-30 days,1705,1267,216,139,83,19.78,25.8,14.57,85.43
+31-60 days,181,139,21,14,7,37.34,23.91,13.12,86.88
