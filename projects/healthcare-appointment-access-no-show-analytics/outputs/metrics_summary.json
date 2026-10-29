@@ -1,0 +1,5 @@
+{
+  "dataset": {"rows": 7200, "start_date": "2026-04-01", "end_date": "2026-09-27", "clinics": 6, "specialties": 8},
+  "kpis": {"scheduled_appointments": 7200, "attended": 5600, "no_shows": 696, "cancelled": 569, "rescheduled": 335, "no_show_rate_pct": 11.05, "attendance_rate_pct": 88.95, "cancellation_rate_pct": 7.9, "reschedule_rate_pct": 4.65, "avg_lead_days": 11.0, "avg_wait_min_attended": 25.26, "reminder_coverage_pct": 82.07},
+  "definitions": {"no_show_rate": "No-show / (Attended + No-show). Cancelled and Rescheduled are excluded.", "attendance_rate": "Attended / (Attended + No-show).", "cancellation_rate": "Cancelled / all scheduled appointment records.", "reminder_comparison": "Descriptive only; reminder assignment is not randomized and does not support causal conclusions."}
+}
