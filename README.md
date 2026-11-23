@@ -74,8 +74,8 @@ Abu Humza Khan
 
 🔗 LinkedIn | https://www.linkedin.com/in/abu-humza-khan/
  | GitHub | https://github.com/AbuHumzaKhan
- | Kaggle | https://www.kaggle.com/abuhumzakhan
- Personal Portfolio | https://abuhumzakhan.github.io/AHK-Portfolio.github.io/
+ | Kaggle | https://www.kaggle.com/abuhumza-khan
+ Personal Portfolio | https://abuhumza-khan.github.io/AHK-Portfolio.github.io/
 
 
 ## New analytics project showcases — 26 October 2026
@@ -94,3 +94,8 @@ These folders are portfolio showcases. Full local build bundles include generate
 ## New analytics project showcase — 29 October 2026
 
 - [Healthcare Appointment Access & No-show Analytics](projects/healthcare-appointment-access-no-show-analytics/README.md): 7,200 synthetic outpatient appointment records; Python, SQL/SQLite, Excel formulas/charts, reproducible QA, and a local HTML dashboard. Includes explicit no-show/cancellation denominators and synthetic-data limitations. A native Power BI .pbix and hosted dashboard deployment are not claimed.
+
+
+## New analytics project showcase — 23 November 2026
+
+- [Project 10 — E-Commerce Delivery SLA & Late Shipment Analytics](projects/ecommerce-delivery-sla-late-shipment-analytics/README.md): 24,000 synthetic order records analyzed with Python, SQL/SQLite, Excel and Power BI-ready DAX/M assets. Includes carrier and city SLA scorecards, premium-service analysis, late-order financial exposure, reproducible QA and executive findings. Native .pbix and hosted deployment are not claimed.
